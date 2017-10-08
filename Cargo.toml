@@ -1,0 +1,7 @@
+[package]
+authors = ["Matthias Endler <matthias-endler@gmx.net>"]
+name = "6532"
+version = "0.1.0"
+
+[dependencies]
+rand = "0.3.16"
