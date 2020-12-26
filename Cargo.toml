@@ -1,6 +1,6 @@
 [package]
 authors = ["Matthias Endler <matthias-endler@gmx.net>"]
-name = "6532"
+name = "mos6532"
 version = "0.1.0"
 
 [dependencies]
