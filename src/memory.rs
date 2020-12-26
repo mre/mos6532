@@ -21,7 +21,9 @@ impl Clone for Memory {
 
 impl Memory {
     pub fn new() -> Memory {
-        Memory { bytes: [0; MEMORY_SIZE] }
+        Memory {
+            bytes: [0; MEMORY_SIZE],
+        }
     }
 
     pub fn get_byte(&self, address: Address) -> u8 {
@@ -51,5 +53,11 @@ impl Memory {
         for (dest, src) in slice.iter_mut().zip(values.iter()) {
             *dest = *src;
         }
+    }
+}
+
+impl Default for Memory {
+    fn default() -> Self {
+        Self::new()
     }
 }

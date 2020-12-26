@@ -34,9 +34,15 @@ impl Registers {
             swacnt: 0,
             swchb: 0,
             swbcnt: 0,
-            intim: rand::random::<(u8)>(),
+            intim: rand::random::<u8>(),
             instat: 0,
         }
+    }
+}
+
+impl Default for Registers {
+    fn default() -> Self {
+        Self::new()
     }
 }
 

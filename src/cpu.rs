@@ -1,7 +1,7 @@
 use memory::Memory;
 use registers::Registers;
 
-struct CPU {
+pub struct CPU {
     pub registers: Registers,
     pub memory: Memory,
 }
@@ -18,10 +18,15 @@ impl CPU {
         *self = CPU::new();
     }
 
-    pub fn set_timer_register(&mut self, value: u8, interval: u16) {
+    pub fn set_timer_register(&mut self, value: u8, _interval: u16) {
         self.registers.instat = 0;
         self.registers.intim = value;
+    }
+}
 
+impl Default for CPU {
+    fn default() -> Self {
+        Self::new()
     }
 }
 
@@ -32,6 +37,6 @@ mod tests {
 
     #[test]
     fn it_works() {
-        let cpu = CPU::new();
+        let _cpu = CPU::new();
     }
 }
