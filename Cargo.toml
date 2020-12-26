@@ -4,4 +4,4 @@ name = "mos6532"
 version = "0.1.0"
 
 [dependencies]
-rand = "0.7.2"
+rand = "0.8.0"
